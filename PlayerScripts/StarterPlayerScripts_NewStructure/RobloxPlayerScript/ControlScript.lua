@@ -130,7 +130,7 @@ local function SelectTouchModule()
 end
 
 local function OnRenderStepped()
-	if activeController and activeController.enabled and humanoid then
+	if activeController and activeController.enabled and humanoid and humanoid.Parent ~= nil then
 		local moveVector = activeController:GetMoveVector()
 
 		local vehicleConsumedInput = false
